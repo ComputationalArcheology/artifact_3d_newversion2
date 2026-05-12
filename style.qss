@@ -1,0 +1,296 @@
+/* =========================================
+   Artifact3D - Global Stylesheet
+   ========================================= */
+
+/* --- Main Window & Backgrounds --- */
+QMainWindow {
+    background-color: #FFFFFF;
+}
+
+QWidget#CentralWidget {
+    background-color: #FFFFFF;
+}
+
+QFrame#ViewsBox {
+    background-color: #FFFFFF;
+    border: none;
+}
+
+/* העיצוב לפאנל השמאלי (נשאר לבן ונקי) */
+QFrame#SidePanelLeft {
+    background-color: #FFFFFF;
+    border: none;
+}
+
+/* העיצוב החדש לפאנל הימני (רקע טורקיז-לבן חיוור ופס הפרדה) */
+QFrame#SidePanelRight {
+    background-color: #FFFFFF;
+    border-left: none;
+    border-top: none;
+    border-right: none;
+    border-bottom: none;
+}
+
+
+QLabel#LabelFilename {
+    font-weight: bold;
+    font-size: 14px;
+    color: #111827; /* טקסט כהה */
+    background-color: #FFFFFF; /* לבן */
+    border-bottom: 1px solid #FFFFFF;
+    padding: 4px;
+}
+
+/* --- Global ArtifactButton Style (Asymmetric Shape) --- */
+QPushButton {
+    background-color: #54C9BD;
+    color: #FFFFFF;
+    /* צורה לא שווה - פינות מעוגלות באלכסון */
+    border-radius: 12px 4px 12px 4px;
+    padding: 6px 14px;
+    border: 1px solid #38A89D;
+    font-size: 12px;
+    font-weight: bold;
+    min-width: 140px;
+    max-width: 140px;
+
+    /* מיישר את הטקסט למרכז הכפתור */
+    text-align: center;
+}
+
+QPushButton:hover {
+    background-color: #5CE0D4;
+    border-color: #45C4B8;
+}
+
+QPushButton:pressed {
+    background-color: #32A398;
+    border-color: #288279;
+    /* "לחיצה" מקטינה קצת את הפינות */
+    border-radius: 8px 2px 8px 2px;
+}
+
+QPushButton:checked {
+    background-color: #288279;
+    color: white;
+    border-color: #1F665F;
+}
+
+QPushButton:disabled {
+    background-color: #F3F4F6;
+    color: #9CA3AF;
+    border-color: #E5E7EB;
+}
+
+
+
+/* --- Global ArtifactToolButton Style --- */
+QToolButton {
+    background-color: #E5E7EB;
+    color: #111827;
+    border-radius: 8px 2px 8px 2px;
+    padding: 6px 14px;
+    border: 1px solid #CBD5E1;
+    font-size: 15px;
+    font-weight: 500;
+}
+QToolButton:hover {
+    background-color: #D1D5DB;
+    border-color: #94A3B8;
+}
+QToolButton:pressed {
+    background-color: #9CA3AF;
+    border-color: #6B7280;
+}
+
+/* --- MenuBar Style (Light & Airy) --- */
+QMenuBar {
+    background-color: #FFFFFF;
+    color: #374151;
+    font-weight: 600;
+    font-size: 14px;
+    padding: 4px;
+    /* התוספת: פס עליון בולט ופס תחתון עדין מאוד */
+    border-top: 3px solid #45C4B8;
+    border-bottom: 1px solid #F3F4F6;
+}
+
+QMenuBar::item {
+    background-color: transparent;
+    padding: 8px 16px; /* ריווח נדיב לתחושה נושמת */
+    margin: 2px 4px;
+    border-radius: 8px; /* פינות עגולות וסימטריות כמו בכפתורים */
+}
+
+QMenuBar::item:selected {
+    /* כשעוברים עם העכבר - רקע טורקיז חיוור מאוד וטקסט תואם */
+    background-color: #F0FAF9;
+    color: #288279;
+}
+
+QMenu {
+    background-color: #FFFFFF;
+    color: #374151;
+    border: 1px solid #E5E7EB;
+    border-radius: 8px;
+    padding: 8px 0px; /* תוספת אוויר למעלה ולמטה בתוך החלונית שנפתחת */
+}
+
+QMenu::item {
+    padding: 8px 32px 8px 24px;
+    font-size: 14px;
+    background-color: transparent;
+}
+
+QMenu::item:selected {
+    background-color: #F0FAF9;
+    color: #288279;
+    /* הוספת פינות מעוגלות גם לפריטים שבתוך התפריט הנגלל */
+    border-radius: 6px;
+    margin: 0px 8px; /* מרחיק את אזור הלחיצה מהשוליים למראה מודרני יותר */
+}
+
+QMenu::separator {
+    height: 1px;
+    background-color: #F3F4F6;
+    margin: 8px 16px;
+}
+
+/* --- Left Panel Dimensions --- */
+QLabel#DimTitle {
+    color: #54C9BD;
+    font-weight: bold;
+    font-size: 14px;
+    border-bottom: 1px solid #E5E7EB;
+    padding-bottom: 4px;
+    margin-top: 12px;
+    margin-bottom: 4px;
+}
+
+QLabel#DimValue {
+    color: #374151; /* פחם */
+    font-size: 13px;
+    padding-left: 4px;
+}
+/* =========================================
+   CrossSectionWindow Styles
+   ========================================= */
+
+/* עיצוב הפאנל הצדדי של חלון החיתוך */
+CrossSectionWindow QFrame#SidePanel {
+    background-color: #F0F0F0;
+    border-right: 1px solid #CCCCCC;
+}
+
+/* עיצוב שורת הכותרת העליונה */
+CrossSectionWindow QFrame#HeaderFrame {
+    background-color: #FFFFFF;
+    border-bottom: 1px solid #CCCCCC;
+}
+
+/* --- הכותרת הראשית (Cross Section Tool) --- */
+CrossSectionWindow QLabel#HeaderTitle {
+    font-size: 16px;           /* גודל פונט מעט גדול יותר לנוכחות */
+    font-weight: 900;          /* משקל פונט עבה במיוחד (Extra Bold) */
+    color: #1F2937;            /* אפור-פחם כהה מאוד (מודרני יותר משחור מוחלט) */
+    padding-left: 10px;        /* מרחיק את הטקסט מעט שמאלה */
+    border-left: 4px solid #54C9BD; /* פס טורקיז עבה ואלגנטי שתוחם את הכותרת משמאל */
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+
+CrossSectionWindow QLabel#HeaderMode {
+    font-weight: bold;
+    font-size: 12px;
+    color: #555555;
+}
+QPushButton#SmallArrowBtn {
+    min-width: 40px;
+    max-width: 40px;
+    min-height: 30px;
+    border-radius: 4px; /* פינות רגילות, לא א-סימטריות */
+    padding: 0px;
+}
+/* =========================================
+   CrossSectionWindow - Components
+   ========================================= */
+
+/* --- קופסת הקבוצה (GroupBox) של אזור הסליידר --- */
+CrossSectionWindow QGroupBox#CutPositionGroup {
+    font-weight: bold;
+    color: #374151;
+    border: 1px solid #D1D5DB; /* מסגרת עדינה */
+    border-radius: 6px;
+    margin-top: 12px; /* מפנה מקום לכותרת של הקופסה */
+    background-color: #FFFFFF; /* רקע לבן ונקי */
+}
+
+CrossSectionWindow QGroupBox#CutPositionGroup::title {
+    subcontrol-origin: margin;
+    left: 10px;
+    padding: 0 5px;
+    color: #54C9BD; /* כותרת בצבע טורקיז */
+}
+
+/* --- תווית הערך של ה-Z --- */
+CrossSectionWindow QLabel#LabelZValue {
+    font-size: 15px;
+    font-weight: bold;
+    color: #111827; /* טקסט כהה ובולט */
+    padding: 4px;
+}
+
+/* --- עיצוב הסליידר האנכי (QSlider) --- */
+
+/* הפס עצמו (המסילה) */
+CrossSectionWindow QSlider::groove:vertical {
+    background: #E5E7EB; /* אפור בהיר */
+    width: 6px; /* מסילה דקה ומודרנית */
+    border-radius: 3px;
+}
+
+/* הכפתור הנגרר שעל הסליידר */
+CrossSectionWindow QSlider::handle:vertical {
+    background: #54C9BD; /* צבע הטורקיז שלנו */
+    height: 18px;
+    width: 18px;
+    margin: 0 -6px; /* גורם לכפתור לבלוט החוצה מהמסילה הדקה */
+    border-radius: 9px; /* הופך אותו לעיגול מושלם */
+    border: 1px solid #38A89D;
+}
+
+/* אפקט מעבר עכבר על הכפתור הנגרר */
+CrossSectionWindow QSlider::handle:vertical:hover {
+    background: #5CE0D4;
+    border: 1px solid #45C4B8;
+}
+
+/* אפקט לחיצה על הכפתור הנגרר */
+CrossSectionWindow QSlider::handle:vertical:pressed {
+    background: #288279;
+}
+
+/* החלק של המסילה שנמצא מתחת לכפתור (מראה התקדמות) */
+CrossSectionWindow QSlider::add-page:vertical {
+    background: #D1D5DB; /* צבע המסילה "הריקה" */
+    width: 6px;
+    border-radius: 3px;
+}
+
+/* החלק של המסילה שנמצא מעל הכפתור (בסליידר אנכי הפוך זה הצד המלא) */
+CrossSectionWindow QSlider::sub-page:vertical {
+    background: #54C9BD; /* המסילה נצבעת בטורקיז עד לנקודה של הסליידר */
+    width: 6px;
+    border-radius: 3px;
+}
+/* --- תווית מצב המיקום (Normal / Manual Positioning) --- */
+CrossSectionWindow QLabel#HeaderMode {
+    background-color: #E0F2F1; /* רקע טורקיז חיוור ומרגיע */
+    color: #288279;            /* טקסט טורקיז כהה לקריאות מושלמת */
+    font-weight: 800;
+    font-size: 11px;
+    padding: 4px 14px;         /* ריווח פנימי שיוצר את צורת הבועה */
+    border-radius: 12px;       /* פינות מעוגלות למראה של "גלולה" */
+    border: 1px solid #B2DFDB; /* גבול עדין להפרדה מהרקע */
+    text-transform: uppercase; /* הופך את האותיות לגדולות למראה נקי (אופציונלי) */
+}
